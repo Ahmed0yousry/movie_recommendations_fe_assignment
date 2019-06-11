@@ -1661,11 +1661,11 @@ color: #ffffff;
       font-weight: 300;
       margin-bottom: 20px; }
       .movie-list .movie .movie-title a {
-        color: #464a52;
+        color: #3f3f3f;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .movie-list .movie .movie-title a:hover {
-          color: #00a70e; }
+          color: #00740a; }
 
 .pagination {
   clear: both;
