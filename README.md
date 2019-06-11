@@ -2,9 +2,17 @@
 This repository contains an modified version of the assignment for the summer internship.
 
 
-
+# overall shot
 ![alt text](task_complete.png)
 
+# filter shot
+![alt text](filter_shot.PNG)
+
+# subscribe shot
+![alt text](subscribe_shot.PNG)
+
+# search shot
+![alt text](search_shot.PNG)
 
 ## Features supported by the front end 
 As can be seen from the image below the features included are: 
