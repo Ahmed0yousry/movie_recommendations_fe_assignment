@@ -7,6 +7,21 @@
 /*=========================================== 
  * Importing CSS Libraries
  *===========================================*/
+.page_switcher
+{
+  font-size: 1.2rem;
+  background-color: rgb(110, 110, 109);
+  color:rgb(234, 253, 232);
+  text-align: center;
+  padding: 5px;
+  border-radius:15px; 
+}
+
+.on
+{
+background-color: #00b318;
+}
+
 article,
 aside,
 details,
@@ -25,6 +40,18 @@ canvas,
 video {
   display: inline-block; }
 
+.bg { 
+    /* The image used */
+    background-image: url("images/1.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -33,7 +60,7 @@ audio:not([controls]) {
   display: none; }
 
 html {
-  background: #fff;
+  background: rgba(209, 209, 209, 0.89);
   color: #000;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
@@ -260,15 +287,15 @@ form textarea {
  */
 .button, form input[type="submit"], form button, form input[type="reset"], .contact-form input[type="submit"] {
   border: none;
-  background: #ffaa3c;
+  background: #026307;
   padding: 10px;
   border-radius: 3px;
-  color: #92601e;
+  color: #5fff8f;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   -webkit-transition: .3s ease;
           transition: .3s ease; }
   .button:hover, form input[type="submit"]:hover, form button:hover, form input[type="reset"]:hover, .contact-form input[type="submit"]:hover {
-    background-color: #ffc06f; }
+    background-color: #00b318; }
 
 .slider {
   position: relative;
@@ -469,7 +496,7 @@ ul.arrow {
 
 .cf {
   border: none;
-  background: #ffaa3c;
+  background: #3cff66;
   padding: 10px;
   border-radius: 3px;
   color: #92601e;
@@ -1556,7 +1583,9 @@ ul.arrow {
         color: #84878d; }
 
 .no-bullet {
-  list-style: none; }
+  list-style: none;
+color: #ffffff;
+}
 
 .leading {
   font-size: 26px;
@@ -1632,11 +1661,11 @@ ul.arrow {
       font-weight: 300;
       margin-bottom: 20px; }
       .movie-list .movie .movie-title a {
-        color: #84878d;
+        color: #464a52;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
         .movie-list .movie .movie-title a:hover {
-          color: #ffaa3c; }
+          color: #00a70e; }
 
 .pagination {
   clear: both;
@@ -1655,7 +1684,7 @@ ul.arrow {
     -webkit-transition: .3s ease;
             transition: .3s ease; }
     .pagination .page-number.current, .pagination .page-number:hover {
-      background: #ffaa3c;
+      background: #4e27ff;
       color: white; }
 
 .movie-meta, .starring {
@@ -1667,13 +1696,17 @@ ul.arrow {
 /*
  * Footer Styles
  */
+ .widget-title
+ {
+   font-size: 1.2rem;
+ }
 .site-footer {
   padding: 50px 0; }
   .site-footer .widget {
     margin-bottom: 30px; }
   .site-footer .widget-title {
-    color: #bec1c8;
-    font-weight: 300; }
+    color: #d6dbe7;
+    font-weight: 400; }
   .site-footer .subscribe-form input[type="text"] {
     width: 100%;
     border: 1px solid #bec1c8;

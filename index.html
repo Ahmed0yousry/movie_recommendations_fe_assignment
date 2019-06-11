@@ -1,195 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Movie Review | Review</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="star.css">
-		
-		<!--[if lt IE 9]>
+	<title>Movie Review | Review</title>
+
+	<!-- Loading third party fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="CSS/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="CSS/bootstrap-reboot.min.css" />
+	<link rel="stylesheet" href="CSS/bootstrap.min.css" />
+	<link rel="stylesheet" href="CSS/all.css" />
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+	<link rel='stylesheet' href="CSS/index_styling.css">
+	<link rel='stylesheet' href="CSS/searchStyle.css">
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="star.css">
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
-	</head>
+</head>
 
-	<body onload="getRandomMedia()">
-		
+<body onload="getRandomMedia()">
 
-		<div id="site-content">
-			<header class="site-header">
-				<div class="container">
+	<div class="nav_bar_top" id="nav_bar_top1">
+		<div class="container_me">
+			<a class="btn btn-outline-dark" id="sms" href="#" style="display: inline-block;font-size: 1.8rem; padding: 0px 10px;border: 0;color: whitesmoke;">
+				<a href="http://think-big.solutions/" style="background-color: rgb(255, 255, 255);border-radius: 15px;padding: 5px;padding-right: 0px;"
+				 id="branding">
+					<img src="logo.png" width="50" height="40" alt="" class="logo">
+				</a>
 
-					<!-- ThinkBIG Logo Start-->
-					<a href="http://think-big.solutions/" id="branding">
-						<img src="logo.png" width="130" height="100" alt="" class="logo">
-					</a>
-					<!-- ThinkBIG Logo End-->
+			</a>
+			<div class="floating_buttons" style="margin: 6px;margin-bottom: 0px">
 
-					<!-- Subscribe START-->
-					<div class="col-md-2" style="float: right">
-						<div class="contact-form">
-							<input type="submit"
-								   disabled=disabled
-								   value="Subscribe"
-								   style="display: block; margin-bottom:14px; width: 100%; height:90px ">
+				<a class="btn btn-success" id="signup" href="" style="color: white;">Sign Up</a>
+				<a class="btn btn-outline-primary" id="login" href="" style="color: white;border-color: #fff;">Log In</a>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel" style="font-size: 1.4rem;">movies filter</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div style="margin: 7px;width:45%;float: left;">
+						<label style="color: rgb(0, 102, 255);">YEAR</label>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck1">
+							<label class="custom-control-label" for="customCheck1">2012</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck2">
+							<label class="custom-control-label" for="customCheck2">2013</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck3">
+							<label class="custom-control-label" for="customCheck3">2014</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck4">
+							<label class="custom-control-label" for="customCheck4">2015</label>
 						</div>
 					</div>
+
+					<div style="margin: 7px;width:45%; float: left;">
+						<label style="color: rgb(0, 102, 255);">TYPE</label>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck1">
+							<label class="custom-control-label" for="customCheck1">ACTION</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck2">
+							<label class="custom-control-label" for="customCheck2">DRAMA</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck3">
+							<label class="custom-control-label" for="customCheck3">COMDY</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customCheck4">
+							<label class="custom-control-label" for="customCheck4">Horror</label>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ******************************************************** -->
+	<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel" style="font-size: 1.5rem;">Subscribe procedure</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
 					<!-- Subscribe End-->
 
 					<!-- EMAIL & Authentication Token Handling START-->
-					<div class="col-md-2" style="float: right">
+					<div class="col-md-6" style="float: right; margin-top: 10px;padding-bottom: 0px;">
 						<div class="contact-form">
-							<input type="submit" value="Send Auth Token"
-								   style="display: block; margin-bottom:
-									   14px; width: 100%">
+							<input type="submit" value="Send Auth Token" style="display: block; margin-bottom:
+												   14px; width: 100%">
 
-							<input type="submit" value="Test Auth Token"
-								   style="display: block; width: 100%">
+							<input type="submit" value="Test Auth Token" style="display: block; width: 100%">
 						</div>
 					</div>
 
-					<div class="col-md-5" style="float: right">
+					<div class="col-md-6" style="float: left;margin-top: 10px;padding-bottom: 0px;">
 						<div class="contact-form">
 							<input id="email_input" type="text" class="email" placeholder="enter your email">
 							<input id="token_input" type="text" class="email" placeholder="enter your verification token">
 						</div>
 					</div>
-					<!-- EMAIL & Authentication Token Handling END-->
 				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Subscribe</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--************************************************************************-->
+	<div id="site-content" class="bg">
 
-			</header>
+		<header class="site-header">
+			<div class="container">
+
+				<!-- ThinkBIG Logo Start-->
+
+				<!-- ThinkBIG Logo End-->
+
+				<!-- Subscribe START-->
+
+				<!-- EMAIL & Authentication Token Handling END-->
+			</div>
+
+		</header>
 
 
-			<main class="main-content">
-				<div class="container">
-					<div class="page">
+		<main class="main-content">
 
-
-						<div class="filters">
-							<select name="#" id="#" placeholder="Choose Category">
-								<option value="#">Action</option>
-								<option value="#">Drama</option>
-								<option value="#">Fantasy</option>
-								<option value="#">Horror</option>
-								<option value="#">Adventure</option>
-							</select>
-							<select name="#" id="#">
-								<option value="#">2012</option>
-								<option value="#">2013</option>
-								<option value="#">2014</option>
-							</select>
-
-							<form class="search-form" style="float: right">
-								<input id="search_input" type="text" placeholder="Search...">
-								<button type="button"><i class="fa fa-search"></i></button>
-							</form>
+			<div class="container" style="background-color: rgba(243, 243, 243, 0.582);border-radius: 15px;">
+				<div style="background-color: rgba(145, 145, 145, 0.829);">
+					<div style="float: left;">
+						<a class="btn btn-dark" id="filters" style="font-size: 1.6rem; border-color: rgb(56, 55, 55);margin: 7px;color: rgb(255, 255, 255);"
+						 data-toggle="modal" data-target="#exampleModal">
+							<i class="fas fa-filter"></i> Filters</a>
+					</div>
+					<div style="float: left;">
+						<a class="btn btn-danger" id="filters" style="font-size: 1.6rem;color: rgb(224, 173, 105);margin: 7px;color: rgb(255, 255, 255);"
+						 data-toggle="modal" data-target="#exampleModal1">Subscribe</a>
+					</div>
+					<div class="flexbox" style="width: 40%;float: right; border-radius:15px; ">
+						<div class="search">
+							<div>
+								<input type="text" placeholder="       Search . . ." required>
+							</div>
 						</div>
+					</div>
 
 
-						<div id="media" class="movie-list">
+				</div>
+				<div class="page">
 
 
-						</div> <!-- .movie-list -->
-
+					<div id="media" class="movie-list">
 
 
 					</div>
-
-				</div> <!-- .container -->
-			</main>
+					<!-- .movie-list -->
 
 
 
+				</div>
+				<div style="clear: both;text-align: center;">
+					<i class="fas fa-angle-double-left page_switcher btn"></i>
+					<span class="page_switcher btn on">1</span>
+					<span class="page_switcher btn">2</span>
+					<span class="page_switcher btn">3</span>
+					<span class="page_switcher btn">4</span>
+					<span class="page_switcher btn">5</span>
+					<span class="page_switcher btn">6</span>
+					<i class="fas fa-angle-double-right page_switcher btn"></i>
+				</div>
+
+			</div>
+			<!-- .container -->
+		</main>
 
 
 
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
-							</div>
+
+
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row" style="background-color: rgb(158, 157, 157);border-radius: 15px;padding: 20px;">
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">About Us</h3>
+							<p class="no-bullet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
 						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Recent Review</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
+					</div>
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Recent Review</h3>
+							<ul class="no-bullet">
+								<li>Lorem ipsum dolor</li>
+								<li>Sit amet consecture</li>
+								<li>Dolorem respequem</li>
+								<li>Invenore veritae</li>
+							</ul>
 						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Help Center</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
+					</div>
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Help Center</h3>
+							<ul class="no-bullet">
+								<li>Lorem ipsum dolor</li>
+								<li>Sit amet consecture</li>
+								<li>Dolorem respequem</li>
+								<li>Invenore veritae</li>
+							</ul>
 						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Join Us</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
+					</div>
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Join Us</h3>
+							<ul class="no-bullet">
+								<li>Lorem ipsum dolor</li>
+								<li>Sit amet consecture</li>
+								<li>Dolorem respequem</li>
+								<li>Invenore veritae</li>
+							</ul>
 						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Social Media</h3>
-								<ul class="no-bullet">
-									<li>Facebook</li>
-									<li>Twitter</li>
-									<li>Google+</li>
-									<li>Pinterest</li>
-								</ul>
-							</div>
+					</div>
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Social Media</h3>
+							<ul class="no-bullet">
+								<li>Facebook</li>
+								<li>Twitter</li>
+								<li>Google+</li>
+								<li>Pinterest</li>
+							</ul>
 						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Newsletter</h3>
-								<form action="#" class="subscribe-form">
-									<input type="text" placeholder="Email Address">
-								</form>
-							</div>
+					</div>
+					<div class="col-md-2">
+						<div class="widget">
+							<h3 class="widget-title">Newsletter</h3>
+							<form action="#" class="subscribe-form">
+								<input type="text" style="color: #fff;" placeholder="Email Address">
+							</form>
 						</div>
-					</div> <!-- .row -->
+					</div>
+				</div>
+				<!-- .row -->
 
-					<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
-				</div> <!-- .container -->
+				<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
+			</div>
+			<!-- .container -->
 
-			</footer>
-		</div>
-		<!-- Default snippet for navigation -->
-		
+		</footer>
+	</div>
+	<!-- Default snippet for navigation -->
 
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		<script src="js/capp.js"></script>
 
-	</body>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/capp.js"></script>
+
+	<script src="JS/jquery-3.3.1.min.js"></script>
+	<script src="JS/bootstrap.bundle.min.js"></script>
+	<script src="JS/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).scroll(function () { // check if scroll event happened
+				if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+					$("#nav_bar_top1").css({ "background-color": " #ffffff" });// if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+					$("#nav_bar_top1").css({ "transition": "500ms ease" });
+					$("#sms").css({ "transition": "500ms ease" });
+					$("#sms").css({ "color": "rgb(46,57,191)" });
+					$("#login").css({ "transition": "500ms ease" });
+					$("#login").css({ "color": "#000" });
+					$("#login").css({ "border-color": "#000" });
+
+
+				} else {
+					$("#nav_bar_top1").css({ "background-color": "transparent" }); // if not, change it back to transparent
+					$("#sms").css({ "transition": "500ms ease" });
+					$("#sms").css({ "color": "#fff" });
+					$("#login").css({ "transition": "500ms ease" });
+					$("#login").css({ "color": "#fff" });
+					$("#login").css({ "border-color": "#fff" });
+
+
+				}
+				filters
+			});
+		});
+	</script>
+</body>
 
 </html>
