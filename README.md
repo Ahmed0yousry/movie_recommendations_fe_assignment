@@ -3,7 +3,7 @@ This repository contains an modified version of the assignment for the summer in
 
 
 
-![alt text](task_comlete.png)
+![alt text](task_complete.png)
 
 
 ## Features supported by the front end 
